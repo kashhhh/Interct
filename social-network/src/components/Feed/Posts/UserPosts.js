@@ -7,17 +7,24 @@ const UserPosts = ({userId,displayImage,noOfPosts,FetchRequests}) => {
   const [user,setUser] = useState();
   const [username,setUsername] =useState('idk');
   const [display,setDisplay] = useState();
-
+  const [date,setDate]= useState()
   useEffect(async() => {
     const userPosts= await FetchRequests.getPostsById(userId);
     const user = await FetchRequests.getUserById(userId);
     const display = await FetchRequests.getDisplay(userId);
+
     setDisplay(display);
     setUser(user);
+
+    const date =new Date(user[0].created_on);
+    setDate(date.toDateString("yyyy-MM-dd"));
+
     setUsername(user[0].username);
     setUserPosts(userPosts);
     console.log(user,userPosts,);
-  }, [])
+  }, []);
+
+
 
   return ( 
     <div>
@@ -30,7 +37,9 @@ const UserPosts = ({userId,displayImage,noOfPosts,FetchRequests}) => {
           <div className="col-6">
             <div className="card-body">
               <p className="card-title fs-4 d-block text-truncate"><b>{username}</b></p>
-              <p className="card-text d-block text-truncate"><small className="text-muted">Created on: 12/07/21</small></p>
+              
+              <p className="card-text d-block text-truncate"><small className="text-muted">Created On: {date}</small></p>
+              <p className="card-text d-block text-truncate"><small className="text-muted">Number of Posts: {userPosts.length}</small></p>
             </div>
           </div>
         </div>

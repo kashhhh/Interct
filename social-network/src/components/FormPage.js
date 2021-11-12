@@ -15,9 +15,6 @@ const FormPage = ({ authentication, FetchRequests, userHook, linkAPI}) => {
     return <AlertForm alertProperties={alertProperties} setAlertCalled={setAlertCalled} />
   }
 
-  useEffect(() => {
-    setAlertCalled(true);
-  }, [alertProperties])
 
   return (
 
@@ -51,6 +48,7 @@ const FormPage = ({ authentication, FetchRequests, userHook, linkAPI}) => {
                       <span className="h2 mb-4">Interct</span>
                     </div>
                   </div>
+                  {callAlert()}
                     <LoginForm setAlertProperties={setAlertProperties} authentication={authentication} FetchRequests={FetchRequests} userHook={userHook} />
 
                     <Registration setAlertProperties={setAlertProperties} linkAPI={linkAPI}/>

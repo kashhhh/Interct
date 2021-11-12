@@ -2,7 +2,7 @@ import UserComment from "./UserComment";
 import displayIcon from "./../../../../Assets/dp.jpg";
 import { useEffect, useState } from "react";
 
-const PostComments = ({FetchRequests,postIds}) => {
+const PostComments = ({FetchRequests,postIds, linkAPI}) => {
   const [comments,setComments]= useState([]);
 
   const [commentText, setCommentText] = useState('');
@@ -15,8 +15,6 @@ const PostComments = ({FetchRequests,postIds}) => {
       formData.append('Comment',commentText);
       formData.append('CommentedUser',localStorage.getItem('user_id'));
 
-      const linkAPI= "http://cd13-1-22-9-52.ngrok.io";
-
       const res = await fetch(
         `${linkAPI}/comments/${postIds.user_id}/${postIds.post_id}`,
         {
@@ -24,7 +22,6 @@ const PostComments = ({FetchRequests,postIds}) => {
           body: formData,
         }
       )
-
       setCommentText('');
       allComments('');
 

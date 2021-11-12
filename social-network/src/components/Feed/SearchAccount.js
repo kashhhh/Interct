@@ -8,7 +8,12 @@ const SearchAccount = ({user,displayImage,noOfPosts,FetchRequests}) => {
     const display = await FetchRequests.getDisplay(user.user_id);
     setDisplay(display);
     setUsername(user.username);
-  }, [])
+  }, []);
+
+  const formatDate = () => {
+    const date = new Date(user.created_on);
+    return date.toDateString("yyyy-MM-dd");
+  }
 
   return ( 
       <div className=" bg-light d-flex border mt-1 mb-1">
@@ -16,7 +21,8 @@ const SearchAccount = ({user,displayImage,noOfPosts,FetchRequests}) => {
         <div className="">
           <p className=" mb-1 ms-1 pt-1 fs-5"><b>{username}</b></p>
           <p className="fs-6 ms-1">
-            Number of Posts: {noOfPosts}
+            Number of Posts: {noOfPosts} <br/>
+            Created on: {formatDate()}
           </p>
         </div>
       </div>

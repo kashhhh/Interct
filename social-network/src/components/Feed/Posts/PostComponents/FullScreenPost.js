@@ -30,6 +30,7 @@ const FullScreenPost = ({FetchRequests, postInfo, linkAPI}) => {
   const [username,setUsername] = useState('');
   const [display, setDisplay] = useState('');
   const [caption,setCaption] = useState('');
+  const [postDate,setPostDate]= useState('');
   
 
   useEffect(async () => {
@@ -43,6 +44,7 @@ const FullScreenPost = ({FetchRequests, postInfo, linkAPI}) => {
 
     setUsername(post[0].username)
     setCaption(post[0].caption);
+    setPostDate(post[0].created_at);
 
     setDisplay(displayIcon)
     setPostImage(postImg);
@@ -53,7 +55,7 @@ const FullScreenPost = ({FetchRequests, postInfo, linkAPI}) => {
   return ( 
      
     <div className="mt-2">
-      <PostNavbar postInfo={postInfo} display={display} username={username} FetchRequests={FetchRequests} />
+      <PostNavbar postInfo={postInfo} postDate={postDate}  display={display} username={username} FetchRequests={FetchRequests} />
       
       <div className="row d-flex">
         

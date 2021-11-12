@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import CreatePostForm from "./Posts/CreatePostForm";
 
-const ProfileCard = ({FetchRequests}) => {
+const ProfileCard = ({FetchRequests, linkAPI}) => {
   const [images,setImages] =useState('');
   const [user,setUser]= useState('');
   
@@ -59,18 +59,18 @@ const ProfileCard = ({FetchRequests}) => {
                 </Link>
             </div>
               {/*LOGOUT*/}
-              <Link to='/getstarted' className="btn btn-outline-primary">
-                <i className="bi bi-box-arrow-right " onClick={ async() =>{
+              <Link to='/getstarted' className="btn btn-outline-primary" onClick={ async() =>{
                 await localStorage.removeItem("user_id");
                 console.log("Logged out");
-              } } ></i> Log Out
+              } } >
+                <i className="bi bi-box-arrow-right "  ></i> Log Out
               </Link>
 
       </div>
       
       <div class="card p-2 pt-2 pb-3 mt-4 shadow-sm">
         <h5 class="card-header bg-primary text-light mb-1">Create Post</h5>
-        <CreatePostForm />
+        <CreatePostForm linkAPI={linkAPI}/>
       </div>
     </div>
    );

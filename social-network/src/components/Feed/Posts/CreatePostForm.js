@@ -9,7 +9,6 @@ const CreatePostForm = ({linkAPI}) => {
     formData.append('File',imageFile);
     formData.append('Caption', postDescription);
 
-    const linkAPI= "http://cd13-1-22-9-52.ngrok.io";
     //STORING IMAGES IN UPLOAD FOLDER
     const res= await fetch(
       `${linkAPI}/upload/${user_id}`,

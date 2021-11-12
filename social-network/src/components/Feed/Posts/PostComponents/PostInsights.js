@@ -5,9 +5,12 @@ const PostInsights = ({likes, commentHook, clickStatus, postInfo, FetchRequests,
 
   const [isLiked,setIsLiked] = useState(false);
   const [likesLength,setLikesLength]= useState(0);
+  const [commentCount,setCommentCount] =useState(0);
 
   useEffect(async () => {
     const likes=await FetchRequests.getLikes(postInfo.user_id,postInfo.post_id);
+    const comments=await FetchRequests.getComments(postInfo.user_id,postInfo.post_id);
+    setCommentCount(comments.length);
     likes.map((like) => {
       if(like.liked_by === parseFloat(localStorage.getItem('user_id'))){
         setIsLiked(true);
@@ -62,7 +65,7 @@ const PostInsights = ({likes, commentHook, clickStatus, postInfo, FetchRequests,
     
       <button className="d-flex flex-fill bg-light justify-content-center border-0 p-2" >
         <Link to={`/post/${postInfo.user_id}/${postInfo.post_id}`} className="text-decoration-none text-primary">
-            <i className="bi bi-chat-right-text me-2"></i> 5
+            <i className="bi bi-chat-right-text me-2"></i> {commentCount}
         </Link>
       </button>
 

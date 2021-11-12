@@ -7,7 +7,6 @@ const ChangeDisplay = ({linkAPI}) => {
 
     const formData = new FormData();
     formData.append('Display',displayImg);
-    const linkAPI= "http://cd13-1-22-9-52.ngrok.io";
 
     const res = await fetch(
       `${linkAPI}/displays/${user_id}`,

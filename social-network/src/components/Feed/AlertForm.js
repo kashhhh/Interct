@@ -12,8 +12,9 @@ const AlertForm = ({alertProperties,setAlertCalled}) => {
     }, 4000);
     console.log('true');
     setAlert(true);
-    
-  }, [])
+    setAlertCalled(false);
+
+  }, [alertProperties]);
 
   return ( 
     <div class="">

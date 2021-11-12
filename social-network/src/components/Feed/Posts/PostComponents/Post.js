@@ -11,7 +11,7 @@ const PostDescription = ({postInfo}) => {
   return ( 
     <div className="bg-light border overflow overflow-auto" >
       <Link to={`/post/${postInfo.user_id}/${postInfo.post_id}`} className="text-decoration-none link-dark">
-      <p className="fs-6 mt-1">{postInfo.caption}</p>
+      <p className="fs-6 mt-1">{postInfo.caption} </p>
       </Link>
     </div>
    );
@@ -42,7 +42,7 @@ const Post = ({ postInfo, FetchRequests, linkAPI }) => {
 
   return ( 
     <div className="mt-2" >
-      <PostNavbar username={postInfo.username} display={display} postInfo={postInfo} FetchRequests={FetchRequests} />
+      <PostNavbar username={postInfo.username} postDate={postInfo.created_at} display={display} postInfo={postInfo} FetchRequests={FetchRequests} />
       
       <div className="row d-flex">
         

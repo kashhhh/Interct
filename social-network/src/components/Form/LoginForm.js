@@ -28,10 +28,10 @@ const LoginForm = ({authentication,FetchRequests,userHook, setAlertProperties}) 
       } 
     });
     if(userInDB===false){
-      setAlertProperties(['danger','User does not exist'])
+      setAlertProperties(['success','User does not exist'])
     }
     if(userInDB===true && correctPwd===false){
-      setAlertProperties(['danger','Incorrect Password'])
+      setAlertProperties(['success','Incorrect Password'])
     }
     
     return userInDB;

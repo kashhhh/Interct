@@ -14,6 +14,7 @@ const SearchPage = ({searchInput,setSearchInput, FetchRequests}) => {
 
   return ( 
     <div className="">
+      <h5 class="card-header bg-primary text-light">Users starting with {searchInput.toLowerCase()}:</h5>
       {
         //CHECKS IF FILTERED OBJECT IS EMPTY
         users.length === 0 ?
@@ -21,7 +22,7 @@ const SearchPage = ({searchInput,setSearchInput, FetchRequests}) => {
          :
         users.map((user,index) => {
             // CLEARS THE SEARCH BAR AND LOADS THE USER PAGE ON CLICK 
-            if(user.username.toLowerCase().startsWith(searchInput)){
+            if(user.username.toLowerCase().startsWith(searchInput.toLowerCase())){
               return <Link to={`/user/${user.user_id}`} className="text-decoration-none link-dark" onClick= {() => setSearchInput('') } key={index}>
               <SearchAccount FetchRequests={FetchRequests} user={user} displayImage={user.display} noOfPosts={user.post_count} />
             </Link>

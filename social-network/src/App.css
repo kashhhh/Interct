@@ -1,0 +1,15 @@
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #12232E;
+}
+
+body {
+  font-family: 'Oswald', sans-serif !important;
+}

@@ -28,7 +28,7 @@ const CreatePostForm = ({linkAPI}) => {
       
       <label htmlor="postImage" className="form-label mt-1"><b>Post Image</b></label>
       <div className="d-flex">
-        <input className="form-control form-control-sm me-2 h-100 bg-secondary" type="file" id="formFileSm" accept=".jpg,.png,.jpeg" required/>
+        <input className="form-control form-control-sm me-2 h-100 bg-secondary" type="file" id="formFileSm" accept=".jpg,.png,.jpeg,.mp4" required/>
         <button type='submit' className="btn text-light bg-primary" >Post</button>
       </div>
     </form>

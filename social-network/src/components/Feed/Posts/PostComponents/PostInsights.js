@@ -53,7 +53,7 @@ const PostInsights = ({likes, commentHook, clickStatus, postInfo, FetchRequests,
 
   return ( 
     <div className=" d-flex bg-light border">
-      <button className="d-flex flex-fill bg-light justify-content-center border-0 p-2 text-primary" onClick = {() => changeLikes() } >
+      <button className="d-flex flex-fill bg-light justify-content-center border-0 p-2 " onClick = {() => changeLikes() } style={{ color: '#EB4A4A'}} >
       {/* LIKES */}
         {isLiked ? 
         <i className="bi bi-heart-fill pe-2" ></i> : 

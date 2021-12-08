@@ -24,7 +24,7 @@ const Feed = ({currentUser,FetchRequests, linkAPI}) => {
       
       <Navbar searchInput={searchInput} setSearchInput={setSearchInput} />
 
-      <div className="d-flex p-1 bg-secondary container" style={{maxHeight: '95vh'}}>
+      <div className="d-flex p-1 bg-secondary container" style={{maxHeight: '90vh'}}>
         
         <div className="container-fluid overflow-auto col-lg-9 col-md-12 col-12 border bg-danger">
 

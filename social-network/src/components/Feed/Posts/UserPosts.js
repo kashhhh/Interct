@@ -36,7 +36,7 @@ const UserPosts = ({userId,displayImage,noOfPosts,FetchRequests}) => {
           </div>
           <div className="col-6">
             <div className="card-body">
-              <p className="card-title fs-4 d-block text-truncate"><b>{username}</b></p>
+              <p className="card-title fs-4 d-block text-truncate"><b>{username} {username==='Aakash Rajpurkar' ? <i class="bi bi-check-circle-fill" style={{color: '#4B78DF'}}></i> :''}</b></p>
               
               <p className="card-text d-block text-truncate"><small className="text-muted">Created On: {date}</small></p>
               <p className="card-text d-block text-truncate"><small className="text-muted">Number of Posts: {userPosts.length}</small></p>

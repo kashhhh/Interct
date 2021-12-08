@@ -19,7 +19,7 @@ const SearchAccount = ({user,displayImage,noOfPosts,FetchRequests}) => {
       <div className=" bg-light d-flex border mt-1 mb-1">
         <img src={display} alt="" className="col-3 col-sm-2 p-2 img-fluid rounded-circle h-50"/>
         <div className="">
-          <p className=" mb-1 ms-1 pt-1 fs-5"><b>{username}</b></p>
+          <p className=" mb-1 ms-1 pt-1 fs-5"><b>{username} {username==='Aakash Rajpurkar' ? <i class="bi bi-check-circle-fill" style={{color: '#4B78DF'}}></i> :''}</b></p>
           <p className="fs-6 ms-1">
             Number of Posts: {noOfPosts} <br/>
             Created on: {formatDate()}

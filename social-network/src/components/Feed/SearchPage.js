@@ -14,7 +14,7 @@ const SearchPage = ({searchInput,setSearchInput, FetchRequests}) => {
 
   return ( 
     <div className="">
-      <h5 class="card-header bg-primary text-light">Users starting with {searchInput.toLowerCase()}:</h5>
+      <h5 class="card-header bg-primary text-light mt-1">Users starting with {searchInput.toLowerCase()}:</h5>
       {
         //CHECKS IF FILTERED OBJECT IS EMPTY
         users.length === 0 ?

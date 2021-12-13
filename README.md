@@ -1,5 +1,5 @@
 # Interct
-## A Full-Stack Social Media Application where you can interact with users across the world
+## Interact with users across the world!
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -11,11 +11,8 @@
        <li><a href="#built-with">Built With</a></li>
        <li>
          <a href="#features">Screenshots</a>
-       </li>
-        
-      </ul>
-    </li>
-    
+       </li>      
+      </ul>  
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -33,6 +30,13 @@ Interct is a social media applicatiton where users can post their pictures with 
 * Like and comment on other posts
 * Search other user profiles from the search bar
 * Sorting feed based on time
+
+### Technical Specifications:
+* Full-Stack Application
+* Mobile responsive
+* CRUD operations
+* REST API
+* Dynamic updating
 
 
 ## Built With

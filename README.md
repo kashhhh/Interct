@@ -20,6 +20,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+![image](https://user-images.githubusercontent.com/56834559/146203033-1ee79c00-6eae-4970-aae5-b9df116df6d3.png)
+
+
 Interct is a social media applicatiton where users can post their pictures with captions, search other peoples profiles, comment on other people's posts and a lot more. It is full-stack mobile responsive web application with CRUD operations with a REST API on the backend
 
 ### Features include:

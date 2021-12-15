@@ -36,7 +36,7 @@ const FormPage = ({ authentication, FetchRequests, userHook, linkAPI}) => {
               </div>
               
               {/* Need to change max height */}
-                <div className="col-md-6 col-lg-7 d-flex overflow-auto" style= {{maxHeight: '80vh'}}>
+                <div className="col-md-6 col-lg-7 d-flex overflow-auto" style= {{maxHeight: '70vh'}}>
                 <div className="card-body p-4 p-lg-5">
                 <div className="d-flex align-items-center mb-3 pb-2">
 

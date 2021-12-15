@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = ({searchInput,setSearchInput}) => {
   return ( 
-    <nav className="navbar border-bottom bg-primary" >
+    <nav className="navbar border-bottom bg-primary " style={{ maxHeight: '10vh' }} >
       <Link to='/' className="col-2 navbar-brand d-none d-lg-block text-light" onClick = {() => setSearchInput('')}>
         <h5 className="pt-1"><i class="bi bi-person-badge"></i> Interct</h5>
       </Link>

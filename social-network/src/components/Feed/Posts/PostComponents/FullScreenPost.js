@@ -34,12 +34,9 @@ const FullScreenPost = ({FetchRequests, postInfo, linkAPI}) => {
   
 
   useEffect(async () => {
-    console.log("1");
     const postImg = await FetchRequests.getPostImage(parseInt(postInfo.user_id), parseInt(postInfo.post_id));
     const post = await FetchRequests.getPost( parseInt(postInfo.user_id) , parseInt(postInfo.post_id) );
-    console.log("2");
-    
-    console.log("3");
+
     const displayIcon = await FetchRequests.getDisplay(postInfo.user_id);
 
     setUsername(post[0].username)
@@ -48,7 +45,6 @@ const FullScreenPost = ({FetchRequests, postInfo, linkAPI}) => {
 
     setDisplay(displayIcon)
     setPostImage(postImg);
-    console.log("a",post,postImage)
   },[]);
 
   

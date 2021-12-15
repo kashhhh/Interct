@@ -13,7 +13,7 @@ const PostNavbar = ({display, username, postInfo,postDate,FetchRequests}) => {
           <img src={display} className="rounded-circle img-fluid col-2 col-sm-1 col-md-1 col-lg-1" alt="" />
 
         <div className="col-10 fs-6 d-flex justify-content-between"> 
-          <span><b>{username}</b></span>
+          <span><b>{username}{username==='Aakash Rajpurkar' ? <i class="bi bi-check-circle-fill ms-2" style={{color: '#4B78DF'}}></i> :''}</b></span>
           <span className="text-muted">{formatDate().substr(4,)}  </span>
            </div>
       </div>

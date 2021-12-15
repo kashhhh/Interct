@@ -40,12 +40,10 @@ function App() {
     getUserById : async (user_id) => {
       const response = await fetch(`${linkAPI}/users/${user_id}`)
       const user= await response.json();
-      console.log(user);
       return user;
     },
 
     getDisplay : async (user_id) => {
-      console.log(loggedInUser);
       const response = await fetch(`${linkAPI}/displays/${user_id}`);
       //const convertToBlob = await response.blob();
       //const imageLink = await URL.createObjectURL(convertToBlob);
@@ -55,21 +53,19 @@ function App() {
     getPosts : async () => {
       const response = await fetch(`${linkAPI}/posts`);
       const posts= await response.json();
-      console.log("posts",posts)
+
       return posts;
     },
 
     getPostsById : async(user_id) => {
       const response = await fetch(`${linkAPI}/posts/${user_id}`);
       const posts= await response.json();
-      console.log("posts",posts)
       return posts;
     },
 
     getPost : async (user_id,post_id) => {
       const response = await fetch(`${linkAPI}/posts/${user_id}/${post_id}`);
       const post = await response.json();
-      console.log("post",post)
       return post;
     },
 
@@ -81,14 +77,12 @@ function App() {
     getComments : async (user_id, post_id) => {
       const response = await fetch(`${linkAPI}/comments/${user_id}/${post_id}`);
       const comments= await response.json();
-      console.log("Comments",comments);
       return comments;
     },
 
     getLikes : async (user_id,post_id) => {
       const response = await fetch(`${linkAPI}/likes/${user_id}/${post_id}`);
       const likes= await response.json();
-      console.log("Likes",likes);
       return likes;
     }
   }

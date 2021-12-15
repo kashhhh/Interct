@@ -18,13 +18,12 @@ const Feed = ({currentUser,FetchRequests, linkAPI}) => {
   let { post_id } = useParams();
 
   return ( 
-    <div className="vh-100 d-flex justify-content-center bg-success overflow-auto" style={{backgroundImage: `url(${''})`}}>
-      {console.log("abc")}
+    <div className=" d-flex justify-content-center bg-success overflow-auto" style={{backgroundImage: `url(${''})`}}>
       <div className="row col-12 col-xl-10 shadow-sm ">
       
       <Navbar searchInput={searchInput} setSearchInput={setSearchInput} />
 
-      <div className="d-flex p-1 bg-secondary container" style={{maxHeight: '90vh'}}>
+      <div className="vh-100 d-flex p-1 bg-secondary container" style={{maxHeight: ''}}>
         
         <div className="container-fluid overflow-auto col-lg-9 col-md-12 col-12 border bg-danger">
 

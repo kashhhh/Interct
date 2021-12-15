@@ -29,10 +29,8 @@ const PostComments = ({FetchRequests,postIds, linkAPI}) => {
   }
 
   const allComments= async() => {
-    console.log(postIds.user_id);
     const comments = await FetchRequests.getComments(parseInt(postIds.user_id), parseInt(postIds.post_id));
     setComments(comments);
-    console.log("yo",comments);
   }
   
   useEffect(async () => {

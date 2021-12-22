@@ -91,6 +91,6 @@ https://user-images.githubusercontent.com/56834559/146201414-6f1dff83-e625-4de6-
 
 ## Contact
 
-Aakash Rajpurkar - https://www.linkedin.com/in/aakash-rajpurkar-8759b0214/ - rajpurkaraakash@gmail.com
+Aakash Rajpurkar - [LinkedIn](https://www.linkedin.com/in/aakash-rajpurkar-8759b0214/) - rajpurkaraakash@gmail.com
 
 <p align="right">(<a href="#top">back to top</a>)</p>

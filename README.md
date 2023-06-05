@@ -22,7 +22,7 @@
 
 ![image](https://user-images.githubusercontent.com/56834559/146203033-1ee79c00-6eae-4970-aae5-b9df116df6d3.png)
 
-Interct is a social media applicatiton where users can post their pictures with captions, search other peoples profiles, comment on other people's posts and a lot more. It is full-stack mobile responsive web application with CRUD operations with a REST API on the backend
+Interct is a full-stack, mobile-responsive web application that serves as a social media platform. Users can upload photos with captions, explore and interact with other users' profiles, comment on posts, and more. The application incorporates CRUD (Create, Read, Update, Delete) operations and utilizes a REST API on the backend.
 
 ### Features include:
 * Creating posts with images and captions
